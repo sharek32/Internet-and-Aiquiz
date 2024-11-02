@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internet and AI General Knowledge Quiz</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+            color: white;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .quiz-container {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            width: 80%;
+            max-width: 600px;
+            text-align: left; /* Align questions to the left */
+        }
+
+        .question {
+            margin: 20px 0;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            color: #fff;
+            background-color: #28a745;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-align: center; /* Center align the result */
+        }
+
+        #input-container {
+            display: none;
+            margin-top: 20px;
+            text-align: center; /* Center align the input container */
+        }
+
+        #input-container input {
+            padding: 10px;
+            font-size: 1rem;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        /* Certificate styling */
+         .certificate {
+            width: 70%;
+            max-width: 800px;
+            height: 600px;
+            padding: 40px;
+            border: 2px solid orange;
+            border-radius: 20px;
+            position: relative;
+            background-color: white; /* Set background color to white */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            text-align: center;
+            display: none; /* Hide certificate initially */
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .logo {
+            width: 80px;
+            height: auto;
+            margin: 0 auto 20px;
+        }
+
+        .curve {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background: linear-gradient(135deg, orange, gold);
+            border-radius: 50%;
+            z-index: 0;
+        }
+
+        .top-left { top: -100px; left: -100px; }
+        .top-right { top: -100px; right: -100px; }
+        .bottom-left { bottom: -100px; left: -100px; }
+        .bottom-right { bottom: -100px; right: -100px; }
+
+        .header h1 { font-size: 2.5em; color: #333; font-weight: bold; }
+        .certificate-text { font-size: 1.2em; color: #333; }
+        .content h2 { font-size: 2.5em; margin: 20px 0; color: orange; font-weight: bold; font-family: 'Courier New', Courier, monospace; }
+        .quiz { font-weight: bold; font-size: 1.5em; }
+        .footer-text, .provider, .date { color: #333; }
+        .certificateid { color: black; /* Change text color to black */ font-size: 1em; /* Adjust font size as needed */ }
+    </style>
+</head>
+<body>
+    <h1>Internet and AI General Knowledge Quiz</h1>
+
+    <div class="quiz-container" id="quiz-container">
+        <div id="quiz">
+            <div class="question">
+                <p>1. What does AI stand for?</p>
+                <label><input type="radio" name="q1" value="incorrect"> Automated Interaction</label><br>
+                <label><input type="radio" name="q1" value="correct"> Artificial Intelligence</label><br>
+                <label><input type="radio" name="q1" value="incorrect"> Advanced Integration</label><br>
+            </div>
+            <div class="question">
+                <p>2. Who is known as the father of the World Wide Web?</p>
+                <label><input type="radio" name="q2" value="correct"> Tim Berners-Lee</label><br>
+                <label><input type="radio" name="q2" value="incorrect"> Mark Zuckerberg</label><br>
+                <label><input type="radio" name="q2" value="incorrect"> Bill Gates</label><br>
+            </div>
+            <div class="question">
+                <p>3. Which programming language is primarily used for web development?</p>
+                <label><input type="radio" name="q3" value="correct"> JavaScript</label><br>
+                <label><input type="radio" name="q3" value="incorrect"> Java</label><br>
+                <label><input type="radio" name="q3" value="incorrect"> C++</label><br>
+            </div>
+            <div class="question">
+                <p>4. What does the term 'Cloud Computing' refer to?</p>
+                <label><input type="radio" name="q4" value="incorrect"> Computing on physical servers in a data center</label><br>
+                <label><input type="radio" name="q4" value="incorrect"> Personal computing on a local device</label><br>
+                <label><input type="radio" name="q4" value="correct"> Using remote servers for storage and processing</label><br>
+            </div>
+            <div class="question">
+                <p>5. What is the primary function of a search engine?</p>
+                <label><input type="radio" name="q5" value="incorrect"> To create web pages</label><br>
+                 <label><input type="radio" name="q5" value="correct"> To index and retrieve web content</label><br>
+                <label><input type="radio" name="q5" value="incorrect"> To design websites</label><br>
+            </div>
+            <div class="question">
+                <p>6. What is the main purpose of HTML?</p>
+                <label><input type="radio" name="q6" value="incorrect"> To style web content</label><br>
+                <label><input type="radio" name="q6" value="incorrect"> To program web applications</label><br>
+                <label><input type="radio" name="q6" value="correct"> To structure web content</label><br>
+            </div>
+            <div class="question">
+                <p>7. Which company developed the AI program AlphaGo?</p>
+                <label><input type="radio" name="q7" value="correct"> DeepMind</label><br>
+                <label><input type="radio" name="q7" value="incorrect"> IBM</label><br>
+                <label><input type="radio" name="q7" value="incorrect"> Google</label><br>
+            </div>
+            <div class="question">
+                <p>8. What does the term 'Big Data' refer to?</p>
+                <label><input type="radio" name="q8" value="incorrect"> Small data sets with high accuracy</label><br>
+                <label><input type="radio" name="q8" value="correct"> Large and complex data sets</label><br>
+                <label><input type="radio" name="q8" value="incorrect"> Data stored on a local device</label><br>
+            </div>
+            <div class="question">
+                <p>9. What does the acronym 'URL' stand for?</p>
+                <label><input type="radio" name="q9" value="incorrect"> Universal Resource Locator</label><br>
+                <label><input type="radio" name="q9" value="incorrect"> Uniform Resource Link</label><br>
+                <label><input type="radio" name="q9" value="correct"> Uniform Resource Locator</label><br>
+            </div>
+            <div class="question">
+                <p>10. What is 'Machine Learning'?</p>
+                <label><input type="radio" name="q10" value="correct"> A subset of AI that allows systems to learn from data</label><br>
+                <label><input type="radio" name="q10" value="incorrect"> A type of software for creating websites</label><br>
+                <label><input type="radio" name="q10" value="incorrect"> A form of digital marketing</label><br>
+            </div>
+            <div class="question">
+                <p>11. What is 'Blockchain' technology used for?</p>
+                <label><input type="radio" name="q11" value="correct"> Secure and transparent record-keeping</label><br>
+                <label><input type="radio" name="q11" value="incorrect"> Web page design</label><br>
+                <label><input type="radio" name="q11" value="incorrect"> Cloud storage</label><br>
+            </div>
+            <div class="question">
+                <p>12. Which social media platform was launched first?</p>
+                <label><input type="radio" name="q12" value="incorrect"> Twitter</label><br>
+                <label><input type="radio" name="q12" value="incorrect"> Instagram</label><br>
+                <label><input type="radio" name="q12" value="correct"> Facebook</label><br>
+            </div>
+            <div class="question">
+                <p>13. What does 'SEO' stand for in digital marketing?</p>
+                <label><input type="radio" name="q13" value="incorrect"> Social Engagement Optimization</label><br>
+                <label><input type="radio" name="q13" value="incorrect"> Search Engine Operation</label><br>
+                <label><input type="radio" name="q13" value="correct"> Search Engine Optimization</label><br>
+            </div>
+            <div class="question">
+                <p>14. What is 'Natural Language Processing'?</p>
+                <label><input type="radio" name="q14" value="correct"> A field of AI focused on the interaction between computers and human language</label><br>
+                <label><input type="radio" name="q14" value="incorrect"> A technique for optimizing search engines</label><br>
+                <label><input type="radio" name="q14" value="incorrect"> A method for data encryption</label><br>
+            </div>
+            <div class="question">
+                <p>15. What is the purpose of an 'API'?</p>
+                <label><input type="radio" name="q15" value="incorrect"> To create graphical user interfaces</label><br>
+                <label><input type="radio" name="q15" value="correct"> To allow different software applications to communicate</label><br>
+                <label><input type="radio" name="q15" value="incorrect"> To manage user data and access</label><br>
+            </div>
+        </div>
+        <button onclick="submitQuiz()">Submit Quiz</button>
+        <div id="result"></div>
+    </div>
+
+    <div id="input-container">
+        <h2>Congratulations! Please enter your details for the certificate:</h2>
+        <label for="name">Name:</label>
+        <input type="text" id="name" placeholder="Your name"><br>
+        <label for="date">Date:</label>
+        <input type="text" id="date" placeholder="Date (e.g., September 3, 2024)"><br>
+        <button onclick="generateCertificate()">Generate Certificate</button>
+    </div>
+
+    <div class="certificate" id="certificate-container">
+        <img src="https://i.imghippo.com/files/eOTDn1724409401.webp" alt="Logo" class="logo">
+        <div class="curve top-left"></div>
+        <div class="curve top-right"></div>
+        <div class="curve bottom-left"></div>
+        <div class="curve bottom-right"></div>
+        <div class="header">
+            <h1>Certificate of Achievement</h1>
+        </div>
+        <div class="content">
+            <p class="certificate-text">This is to certify that</p>
+            <h2 class="name" id="cert-name">[Name]</h2>
+            <p class="certificate-text">has successfully completed the Internet and AI General Knowledge Quiz</p>
+        </div>
+        <div class="footer">
+            <p class="footer-text">provided by</p>
+            <p class="provider">MD SHAREK32.COM</p>
+            <p class="date" id="cert-date">[Date]</p>
+            <p class="certificateid" id="cert-id">Certificate Id: 167430852</p>
+        </div>
+    </div>
+
+    <script>
+        function submitQuiz() {
+            const totalQuestions = 15;
+            let score = 0;
+
+            for (let i = 1; i <= totalQuestions; i++) {
+                const answer = document.querySelector('input[name="q' + i + '"]:checked');
+                if (answer && answer.value === 'correct') {
+                    score++;
+                }
+            }
+
+            const result = document.getElementById('result');
+            const passingScore = 0.8 * totalQuestions;
+
+            if (score >= passingScore) {
+                result.textContent = `You passed with a score of ${score} out of ${totalQuestions}!`;
+                document.getElementById('quiz-container').style.display = 'none';
+                document.getElementById('input-container').style.display = 'block';
+            } else {
+                result.textContent = `You scored ${score} out of ${totalQuestions}. Please try again.`;
+            }
+        }
+
+        function generateRandomID() {
+            return Math.floor(Math.random() * 1000000000); // Generate a random number
+        }
+
+        function generateCertificate() {
+            const name = document.getElementById('name').value;
+            const date = document.getElementById('date').value;
+
+            if (name && date) {
+                document.getElementById('cert-name').textContent = name;
+                document.getElementById('cert-date').textContent = date;
+
+                // Generate and set a random Certificate ID
+                const certId = generateRandomID();
+                document.getElementById('cert-id').textContent = `Certificate Id: ${certId}`;
+
+                document.getElementById('input-container').style.display = 'none';
+                document.getElementById('certificate-container').style.display = 'flex';
+            } else {
+                alert('Please enter both your name and the date.');
+            }
+        }
+    </script>
+</body>
+</html>
